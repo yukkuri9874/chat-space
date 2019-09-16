@@ -1,0 +1,57 @@
+.notice
+  グループを作成しました
+
+.chat-side
+  .chat-side__header
+    .chat-side__header--user
+      seo
+    .chat-side__header__icon
+      = link_to '#' do
+        = fa_icon 'edit', class: "chat-side__header__icon--btn"
+      = link_to '#' do
+        = fa_icon 'cog', class: "chat-side__header__icon--btn"
+  .chat-side__groups
+    .chat-side__groups__group
+      .chat-side__groups__group--group-name
+        Sample
+      .chat-side__groups__group--latest-message
+        Good bye world!
+.chat-main
+  .header
+    .header__left-box
+      .header__left-box--current-group
+        Sample
+      .header__left-box--member
+        Members: seo neko
+    .header__edit
+      .header__edit--btn
+        Edit
+  .messages
+    .box
+      .group
+        .group__left
+          .group__left--user
+            seo
+          .group__left--time
+            2016/09/21    06:16:55
+        .group--under
+          Hello world!
+      .group
+        .group__left
+          .group__left--user
+            neko
+          .group__left--time
+            2016/09/22    06:16:55
+        .group--under
+          Good bye world!
+  .form
+    .form__new-message
+      %input.form__new-message__input-box{:placeholder => "type a message"}
+      %label.upload-label{for:"upload-icon"}
+        %i.fa.fa-picture-o
+        %input{type:"file",style:"display:none;",id:"upload-icon"}
+      .form__new-message__send-btn
+        .form__new-message__send-btn--text
+          Send
+
+

@@ -1,0 +1,109 @@
+.chat-main {
+  width: calc(100vw - 300px);
+  height: 100%;
+  float: right;
+  .header {
+    border-bottom: solid #eeeeee;
+    height: 100px;
+    padding: 0 40px;
+    box-sizing: border-box;
+    &__left-box {
+      float: left;
+      width: 70%;
+      &--current-group {
+        padding-top: 35px;
+        font-size: 20px;
+        color: #333333;
+      }
+      &--member {
+        padding-top: 15px;
+        font-size: 12px;
+        color: $gray-text;
+      }
+    } 
+    &__edit {
+      float: left;
+      width: 30%;
+      position: relative;
+      padding-top: 28px;
+      &--btn {
+        position: absolute;
+        right: 0;
+        padding: 0 20px;
+        height: 40px;
+        line-height: 40px;
+        color: $light-blue;
+        border: solid 1px $light-blue;
+      }
+    }
+  }
+  .messages {
+    height: calc(100vh - 100px - 90px);
+    background-color: #fafafa;
+    .box {
+      padding: 46px 40px 0;
+      .group {
+        margin-bottom: 40px;
+        &__left {
+          display: flex;
+          margin-bottom: 10px;
+          &--user {
+            font-size: 16px;
+            color: $chat-main-text;
+            font-weight: bold;
+          }
+          &--time {
+            font-size: 12px;
+            color: $gray-text;
+            margin-left: 10px;
+          }
+        }
+        &--under {
+          font-size: 14px;
+          color: $chat-main-text;
+        }
+      } 
+    }
+  }
+  .form {
+    background-color: #DDDDDD;
+    height: 90px;
+    width: calc(100vw - 300px);
+    position: relative;
+    &__new-message {
+      padding: 20px 40px;
+      line-height: 50px;
+      display: flex;
+      height: 50px;
+      &__input-box {
+        height: 50px;
+        padding: 0 40px 0 10px;
+        border: 0;
+        width: 80%;
+      }
+      .upload-label {
+        background-color: $white;
+        width: 30px;
+        margin-right: 10px;
+        text-align: center;
+        width: 50px;
+        position: absolute;
+        right: 155px;
+
+      }
+      &__send-btn {
+        color: #fafafa;
+        position: absolute;
+        right: 40px;
+        background-color: $light-blue;
+        margin-left: 15px;
+        width: 100px;
+        &--text {
+          text-align: center;
+          font-size: 100%;
+          padding: 0 30px;
+        }
+      }
+    }
+  }
+}
