@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'messages#index'
-  resources :messages, only: [:index]
-  resources :users, only: [:edit, :update]
+  root 'messages#index'
+  resources :users, only: [:index, :edit, :update]
+  resources :groups, only: [:new, :update, :create, :edit] do
+    resources :messages, only: [:index]
+  end
 end
+
+# ルートはのちにgroups#indexに変更
