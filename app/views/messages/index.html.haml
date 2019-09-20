@@ -1,21 +1,5 @@
-.notice
-  グループを作成しました
-
-.chat-side
-  .chat-side__header
-    .chat-side__header--user
-      seo
-    .chat-side__header__icon
-      = link_to '#' do
-        = fa_icon 'edit', class: "chat-side__header__icon--btn"
-      = link_to '#' do
-        = fa_icon 'cog', class: "chat-side__header__icon--btn"
-  .chat-side__groups
-    .chat-side__groups__group
-      .chat-side__groups__group--group-name
-        Sample
-      .chat-side__groups__group--latest-message
-        Good bye world!
+.wrapper
+  = render 'groups/side_bar'
 .chat-main
   .header
     .header__left-box
